@@ -11,6 +11,7 @@ import FilterReducer from '../reducers/filter';
 import DetailsReducer from '../Reducers/detail';
 import rootReducer from '../Reducers/index';
 import App from '../components/App';
+import Details from '../components/Details';
 import Coin from '../components/Coin';
 import Error from '../components/Error';
 import Filter from '../containers/Filter';
@@ -178,25 +179,6 @@ describe('Error Component', () => {
   });
 });
 
-
-
-// describe('App Component', () => {
-//   test('It should render', () => {
-//     const app = renderer.create(
-//       <Provider state={mockStore} store={mockStore}>
-//         <BrowserRouter>
-//           <App />
-//         </BrowserRouter>
-//       </Provider>,
-//     ).toJSON();
-//     expect(app).toMatchSnapshot();
-//   });
-// });
-
-
-
-
-
 export function createTestStore() {
   const store = createStore(
     combineReducers({
@@ -223,91 +205,16 @@ describe('App Component', () => {
   });
 });
 
-// describe("Your test", () => {
-  // beforeEach(() => {
-  //   store = createTestStore();
-  // });
-//   test('Your component with a full reducer flow', async () => {
-//     // Create a redux store
-//     const { findByText } = render(
-      // <Provider store={store}>
-      //   <App />
-      // </Provider>
-//     );
-//     await findByText('bitcoin');
-//   });
-// });
-
-
-
-
-
-
-// describe('App', () => {
-//   it('Should render text', () => {
-//     const { getByText } = render(
-//       <Provider store={mockStore}>
-//         <BrowserRouter>
-//           <App />
-//         </BrowserRouter>
-//       </Provider>,
-//     );
-//     const element = getByText(/CRYPTO/i);
-//     expect(element).toBeInTheDocument();
-//   });
-// });
-
-// test("should render without problems", () => {
-//   const div = document.createElement("div");
-//   ReactDOM.render(<Provider state={mockStore} addCoin={coins}><App /></Provider>, div);
-// });
-
-// describe('Navbar', () => {
-//   it('Should render text', () => {
-//     const { getByText } = render(
-//       <Provider store={mockStore}>
-//         <BrowserRouter>
-//           <Navbar />
-//         </BrowserRouter>
-//       </Provider>,
-//     );
-//     const element = getByText(/CRYPTO/i);
-//     expect(element).toBeInTheDocument();
-//   });
-
-//   it('Should have a Filter with 900000000000 as an option', () => {
-//     const { getByText } = render(
-//       <Provider store={mockStore}>
-//         <BrowserRouter>
-//           <Filter />
-//         </BrowserRouter>
-//       </Provider>,
-//     );
-//     const element = getByText(/900000000000/i);
-//     expect(element).toBeInTheDocument();
-//   });
-
-//   it('Should have a Filter with 100000000000 as an option', () => {
-//     const { getByText } = render(
-//       <Provider store={mockStore}>
-//         <BrowserRouter>
-//           <Filter />
-//         </BrowserRouter>
-//       </Provider>,
-//     );
-//     const element = getByText(/100000000000/i);
-//     expect(element).toBeInTheDocument();
-//   });
-
-//   it('Should have a Filter with 50000000000 as an option', () => {
-//     const { getByText } = render(
-//       <Provider store={mockStore}>
-//         <BrowserRouter>
-//           <Filter />
-//         </BrowserRouter>
-//       </Provider>,
-//     );
-//     const element = getByText(/50000000000/i);
-//     expect(element).toBeInTheDocument();
-//   });
-// });
+describe('Details Component', () => {
+  beforeEach(() => {
+    store = createTestStore();
+  });
+  test('It should render', () => {
+    const home = renderer.create(
+      <Provider store={store}>
+      <Details />
+    </Provider>
+    ).toJSON();
+    expect(home).toMatchSnapshot();
+  });
+});

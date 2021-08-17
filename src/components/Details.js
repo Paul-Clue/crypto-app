@@ -26,7 +26,7 @@ function Details() {
       <div className="detail">
         <div className="TitleName">
           <img src={coinDetail.icon} alt="coin logo" />
-          <h1 className="TitleName1">{coinDetail.name.toUpperCase()}</h1>
+          <h1 className="TitleName1">{coinDetail.name}</h1>
         </div>
         <h1 className="detail2">
           <span className="bullet">

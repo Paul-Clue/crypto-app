@@ -1,0 +1,128 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Component It should render 1`] = `
+<div
+  className="App"
+>
+  <ul
+    className="UL"
+  />
+</div>
+`;
+
+exports[`Coin Component It should render 1`] = `
+<h1>
+  Something went wrong.
+</h1>
+`;
+
+exports[`Error Component It should render 1`] = `
+<h1>
+  Oops! Page not found!
+</h1>
+`;
+
+exports[`Filter Component It should render 1`] = `
+<select
+  className="categories"
+  id="category"
+  name="category"
+  onChange={[Function]}
+  onSubmit={[Function]}
+>
+  <option
+    value="All"
+  >
+    All
+  </option>
+  <option
+    value="900000000000"
+  >
+    900000000000
+  </option>
+  <option
+    value="100000000000"
+  >
+    100000000000
+  </option>
+  <option
+    value="50000000000"
+  >
+    50000000000
+  </option>
+</select>
+`;
+
+exports[`Nav Component It should render 1`] = `
+<div>
+  <nav
+    className="navbar navbar-light bg-info"
+  >
+    <div
+      className="container-fluid"
+    >
+      <span
+        className="navbar-brand mb-0 h1"
+      >
+        <h1
+          className="NavHead"
+        >
+          <span
+            className="dollar"
+          >
+            $$
+          </span>
+          CRYPTO
+          <span
+            className="dollar"
+          >
+            $$
+          </span>
+        </h1>
+      </span>
+      <div>
+        <select
+          className="categories"
+          id="category"
+          name="category"
+          onChange={[Function]}
+          onSubmit={[Function]}
+        >
+          <option
+            value="All"
+          >
+            All
+          </option>
+          <option
+            value="900000000000"
+          >
+            900000000000
+          </option>
+          <option
+            value="100000000000"
+          >
+            100000000000
+          </option>
+          <option
+            value="50000000000"
+          >
+            50000000000
+          </option>
+        </select>
+         
+        <span
+          className="filtTag"
+        >
+          Filter By Market Cap
+        </span>
+         
+        <span
+          className="filtTag2"
+        >
+           *Caps less than value chosen will appear
+        </span>
+      </div>
+    </div>
+  </nav>
+</div>
+`;

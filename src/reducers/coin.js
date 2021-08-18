@@ -3,7 +3,6 @@ const CoinsReducer = (state = [], action) => {
 
   switch (action.type) {
     case 'CHANGE_COIN':
-      // changedState = [...action.payload];
       changedState = [...action.payload];
       return changedState;
     default:

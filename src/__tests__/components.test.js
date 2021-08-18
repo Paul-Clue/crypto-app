@@ -121,17 +121,6 @@ describe('Nav Component', () => {
   });
 });
 
-describe('Filter Component', () => {
-  test('It should render', () => {
-    const filt = renderer.create(
-      <BrowserRouter>
-        <Filter />
-      </BrowserRouter>,
-    ).toJSON();
-    expect(filt).toMatchSnapshot();
-  });
-});
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -151,9 +140,22 @@ class ErrorBoundary extends React.Component {
       return <h1>Something went wrong.</h1>;
     }
 
-    return this.props.children; 
+    return this.props.children;
   }
 }
+
+describe('Filter Component', () => {
+  test('It should render', () => {
+    const filt = renderer.create(
+      <BrowserRouter>
+        <ErrorBoundary>
+          <Filter />
+        </ErrorBoundary>
+      </BrowserRouter>,
+    ).toJSON();
+    expect(filt).toMatchSnapshot();
+  });
+});
 
 describe('Coin Component', () => {
   test('It should render', () => {

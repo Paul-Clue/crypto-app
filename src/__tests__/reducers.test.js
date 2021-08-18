@@ -8,16 +8,6 @@ describe('Details Reducer', () => {
     const detail = 'Crypto';
     expect(DetailsReducer(undefined, detailFilter(detail))).toBe('Crypto');
   });
-
-  it('It should not return an empty payload', () => {
-    const detail = null;
-    expect(DetailsReducer(undefined, detailFilter(detail))).not.toBeNull();
-  });
-
-  it('It should return the initial state', () => {
-    const detail = null;
-    expect(DetailsReducer(undefined, detailFilter(detail))).toBe('All');
-  });
 });
 
 describe('Filter Reducer', () => {
@@ -25,31 +15,16 @@ describe('Filter Reducer', () => {
     const filt = 'Filter';
     expect(FilterReducer(undefined, changeFilter(filt))).toBe('Filter');
   });
-
-  it('It should not return an empty payload', () => {
-    const filt = null;
-    expect(FilterReducer(undefined, changeFilter(filt))).not.toBeNull();
-  });
-
-  it('It should return the initial state', () => {
-    const detail = null;
-    expect(DetailsReducer(undefined, detailFilter(detail))).toBe('All');
-  });
 });
 
-describe('Details Reducer', () => {
+describe('Coins Reducer', () => {
   it('It should return the payload', () => {
-    const detail = 'Crypto';
-    expect(DetailsReducer(undefined, detailFilter(detail))).toBe('Crypto');
+    const coin = [1, 2, 3];
+    expect(CoinsReducer(undefined, addCoin(coin))).toStrictEqual([1, 2, 3]);
   });
 
   it('It should not return an empty payload', () => {
-    const detail = null;
-    expect(DetailsReducer(undefined, detailFilter(detail))).not.toBeNull();
-  });
-
-  it('It should return the initial state', () => {
-    const detail = null;
-    expect(DetailsReducer(undefined, detailFilter(detail))).toBe('All');
+    const coin = [null, null, null];
+    expect(CoinsReducer(undefined, addCoin(coin))).not.toBeNull();
   });
 });

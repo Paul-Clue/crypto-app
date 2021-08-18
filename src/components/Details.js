@@ -3,7 +3,7 @@ import React from 'react';
 // import { useSelector, useDispatch } from 'react-redux';
 // import { useSelector, useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
-import { detailFilter } from '../actions';
+// import { detailFilter } from '../actions';
 import '../assets/stylesheets/Detail.css';
 
 function Details() {

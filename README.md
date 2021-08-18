@@ -16,7 +16,7 @@ This app was built with React & Redux. It displays all of the most important dat
 
 ## Live Demo
 
-[COVID-19 Data App](https://covid-app-jpdf00.herokuapp.com/)
+[Crypto Coins](https://zealous-rosalind-906c43.netlify.app/)
 
 ## Getting Started
 

@@ -1,11 +1,8 @@
-import { render } from '@testing-library/react';
 import React from 'react';
-import ReactDOM from "react-dom";
 import renderer from 'react-test-renderer';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import { configureStore } from '@reduxjs/toolkit';
-import { createStore, combineReducers } from '@reduxjs/toolkit';
+import { configureStore, createStore, combineReducers } from '@reduxjs/toolkit';
 import CoinsReducer from '../reducers/coin';
 import FilterReducer from '../reducers/filter';
 import DetailsReducer from '../Reducers/detail';
@@ -17,85 +14,6 @@ import Error from '../components/Error';
 import Filter from '../containers/Filter';
 import Nav from '../containers/Nav';
 
-// const initialState = {
-
-//   "coins": [
-//     {
-//       "id": "bitcoin",
-//       "icon": "https://api.coin-stats.com/api/files/812fde17aea65fbb9f1fd8a478547bde/f3738cc5df5f59afb57111d67d951170_1.png",
-//       "name": "Bitcoin",
-//       "symbol": "BTC",
-//       "rank": 1,
-//       "price": 6362.74960614,
-//       "priceBtc": 1,
-//       "volume": 4514555849.85,
-//       "marketCap": 110545616313,
-//       "availableSupply": 17373875,
-//       "totalSupply": 17373875,
-//       "priceChange1h": 0.12,
-//       "priceChange1d": -0.56,
-//       "priceChange1w": -1.07,
-//       "websiteUrl": "https://bitcoin.org",
-//       "redditUrl": "https://www.reddit.com/r/bitcoin",
-//       "twitterUrl": "https://twitter.com/btc",
-//       "exp": [
-//         "https://blockchain.info/",
-//         "https://live.blockcypher.com/btc/",
-//         "https://blockchair.com/bitcoin/blocks"
-//       ]
-//     },
-//     {
-//       "id": "ethereum",
-//       "icon": "https://api.coin-stats.com/api/files/812fde17aea65fbb9f1fd8a478547bde/e1259737fa19af705f0207d5b384c37e_1027.png",
-//       "name": "Ethereum",
-//       "symbol": "ETH",
-//       "rank": 2,
-//       "price": 208.130215868,
-//       "priceBtc": 0.03282527,
-//       "volume": 1522373585.13,
-//       "marketCap": 21473551841,
-//       "availableSupply": 103173639,
-//       "totalSupply": 103173639,
-//       "priceChange1h": 0.04,
-//       "priceChange1d": -1.44,
-//       "priceChange1w": -1.89,
-//       "websiteUrl": "https://www.ethereum.org/",
-//       "redditUrl": "https://www.reddit.com/r/ethereum",
-//       "twitterUrl": "https://twitter.com/ethereum",
-//       "exp": [
-//         "https://etherscan.io/",
-//         "https://ethplorer.io/",
-//         "https://etherchain.org/"
-//       ]
-//     },
-//     {
-//       "id": "ripple",
-//       "icon": "https://api.coin-stats.com/api/files/812fde17aea65fbb9f1fd8a478547bde/f4f2f3a21bc4692c79d66d0b12f15c61_xrp.png",
-//       "name": "XRP",
-//       "symbol": "XRP",
-//       "rank": 3,
-//       "price": 0.5227380884,
-//       "priceBtc": 0.00008244,
-//       "volume": 688526769.189,
-//       "marketCap": 21016950779,
-//       "availableSupply": 40205508733,
-//       "totalSupply": 99991792688,
-//       "priceChange1h": 0.77,
-//       "priceChange1d": 3.8,
-//       "priceChange1w": -1.46,
-//       "websiteUrl": "https://ripple.com/",
-//       "redditUrl": "https://www.reddit.com/r/ripple",
-//       "twitterUrl": "https://twitter.com/Ripple",
-//       "exp": [
-//         "https://xrpcharts.ripple.com/#/graph/",
-//         "https://bithomp.com/explorer/"
-//       ]
-//     },
-//   ]
-// }
-
-// const mockStore = configureStore({ reducer: { rootReducer }, initialState });
-
 const coins = [{
   name: 'bitcoin',
 }];
@@ -106,7 +24,9 @@ const details = [{
   name: 'testing',
 }];
 
-const mockStore = configureStore({reducer: { rootReducer },  addCoin: coins, filter: filters, detail: details });
+const mockStore = configureStore({
+  reducer: { rootReducer }, addCoin: coins, filter: filters, detail: details,
+});
 
 describe('Nav Component', () => {
   test('It should render', () => {
@@ -127,7 +47,7 @@ class ErrorBoundary extends React.Component {
     this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError() {
     return { hasError: true };
   }
 
@@ -136,11 +56,11 @@ class ErrorBoundary extends React.Component {
   }
 
   render() {
-    if (this.state.hasError) {
+    if (this.state.hasError) {//eslint-disable-line
       return <h1>Something went wrong.</h1>;
     }
 
-    return this.props.children;
+    return this.props.children;//eslint-disable-line
   }
 }
 
@@ -181,13 +101,13 @@ describe('Error Component', () => {
   });
 });
 
-export function createTestStore() {
+export function createTestStore() {//eslint-disable-line
   const store = createStore(
     combineReducers({
       addCoin: CoinsReducer,
       filter: FilterReducer,
       detail: DetailsReducer,
-    })
+    }),
   );
   return store;
 }
@@ -200,8 +120,8 @@ describe('App Component', () => {
   test('It should render', () => {
     const home = renderer.create(
       <Provider store={store}>
-      <App />
-    </Provider>
+        <App />
+      </Provider>,
     ).toJSON();
     expect(home).toMatchSnapshot();
   });
@@ -214,8 +134,8 @@ describe('Details Component', () => {
   test('It should render', () => {
     const home = renderer.create(
       <Provider store={store}>
-      <Details />
-    </Provider>
+        <Details />
+      </Provider>,
     ).toJSON();
     expect(home).toMatchSnapshot();
   });

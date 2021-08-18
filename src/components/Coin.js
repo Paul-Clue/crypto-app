@@ -1,14 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import '../assets/stylesheets/Coin.css';
-// import { useSelector, useDispatch } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { detailFilter } from '../actions';
 
 function Coin(props) {
   const dispatch = useDispatch();
-  // const coinDetail = useSelector((state) => state.detail);
   const { coin } = props;
   const { name } = coin.name;
 

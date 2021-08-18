@@ -12,7 +12,6 @@ const Routes = () => (
       <Switch>
         <Route exact path="/" component={App} />
         <Route exact path="/details" component={Details} />
-        {/* <Route exact path="/quote" component={Quote} /> */}
         <Route component={Error} />
       </Switch>
     </BrowserRouter>

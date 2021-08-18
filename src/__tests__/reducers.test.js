@@ -1,7 +1,7 @@
 import DetailsReducer from '../reducers/detail';
 import FilterReducer from '../reducers/filter';
 import CoinsReducer from '../reducers/coin';
-import { detailFilter, changeFilter, addCoin, } from '../Actions/index';
+import { detailFilter, changeFilter, addCoin } from '../Actions/index';
 
 describe('Details Reducer', () => {
   it('It should return the payload', () => {

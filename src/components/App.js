@@ -3,6 +3,7 @@ import '../assets/stylesheets/App.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { addCoin } from '../actions';
 import Coin from './Coin';
+import getData from '../util/apiFetch';
 
 function App() {
   const coinList = useSelector((state) => state.addCoin);
@@ -10,13 +11,10 @@ function App() {
   const filteredCoins = coinList.filter((coin) => coin.marketCap <= parseInt(filtered, 10) || filtered === 'All');
   const dispatch = useDispatch();
 
-  const requestOptions = {
-    method: 'GET',
-    redirect: 'follow',
-  };
+  const url = 'https://api.coinstats.app/public/v1/coins?skip=0&limit=10';
 
   useEffect(() => {
-    fetch('https://api.coinstats.app/public/v1/coins?skip=0&limit=10', requestOptions)
+    getData(url)
       .then((response) => response.json())
       .then((result) => {
         dispatch(addCoin(result.coins));

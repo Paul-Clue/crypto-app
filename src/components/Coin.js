@@ -16,7 +16,7 @@ function Coin(props) {
 
   return (
     <li className="item">
-      <Link className="Link item" coin={name} onClick={() => sendInfo(coin)} to="/Details">
+      <Link className="Link item" coin={name} onClick={() => sendInfo(coin)} to={`/Details/${coin.name}`}>
         <span>
           <h1>
             <img src={coin.icon} alt="coin" width="45px" />

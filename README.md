@@ -6,7 +6,7 @@
 
 ![screenshot](./src/assets/img/crypto-app.png)
 
-This app was built with React & Redux. It displays all of the most important data an investor would need to make any informed decision about investing in any one of the top ten crypto coins. Users can filer the coins by market capitalization.
+This app was built with React & Redux. It displays all of the most important data an investor would need to make any informed decision about investing in any one of the top ten crypto coins. Users can filter the coins by market capitalization.
 
 ## Built With
 
@@ -44,6 +44,12 @@ To run this code locally, follow these simple steps.
 - Open your command prompt.
 - Go inside the folder you extracted from the zip file.
 - Type `npm start` (this should open a page in your default browser and the page should load).
+
+## Run tests
+
+- Open your command prompt.
+- Go inside the folder you extracted from the zip file.
+- Type `npm run test`.
 
 👤 **Paul Clue**
 

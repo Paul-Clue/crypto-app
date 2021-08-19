@@ -125,34 +125,9 @@ exports[`Error Component It should render 1`] = `
 `;
 
 exports[`Filter Component It should render 1`] = `
-<select
-  className="categories"
-  id="category"
-  name="category"
-  onChange={[Function]}
-  onSubmit={[Function]}
->
-  <option
-    value="All"
-  >
-    All
-  </option>
-  <option
-    value="900000000000"
-  >
-    900000000000
-  </option>
-  <option
-    value="100000000000"
-  >
-    100000000000
-  </option>
-  <option
-    value="50000000000"
-  >
-    50000000000
-  </option>
-</select>
+<h1>
+  Something went wrong.
+</h1>
 `;
 
 exports[`Nav Component It should render 1`] = `
@@ -223,6 +198,13 @@ exports[`Nav Component It should render 1`] = `
         >
            *Caps less than value chosen will appear
         </span>
+        <a
+          className="Link home"
+          href="/"
+          onClick={[Function]}
+        >
+          Home
+        </a>
       </div>
     </div>
   </nav>

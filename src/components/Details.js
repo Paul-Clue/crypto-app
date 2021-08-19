@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import '../assets/stylesheets/Detail.css';
 
-function Details() {
+const Details = () => {
   const coinDetail = useSelector((state) => state.detail);
 
   return (
@@ -57,6 +57,6 @@ function Details() {
       </div>
     </>
   );
-}
+};
 
 export default Details;

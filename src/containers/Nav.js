@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import Filter from './Filter';
 import '../assets/stylesheets/Nav.css';
 
-function Nav() {
+const Nav = () => {
   const filtered = useSelector((state) => state.filter);
 
   return (
@@ -36,6 +36,6 @@ function Nav() {
       </nav>
     </div>
   );
-}
+};
 
 export default Nav;

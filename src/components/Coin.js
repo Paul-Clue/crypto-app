@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { detailFilter } from '../actions';
 
-function Coin(props) {
+const Coin = (props) => {
   const dispatch = useDispatch();
   const { coin } = props;
   const { name } = coin.name;
@@ -30,7 +30,7 @@ function Coin(props) {
       </Link>
     </li>
   );
-}
+};
 
 Coin.propTypes = { coin: PropTypes.instanceOf(Object).isRequired };
 

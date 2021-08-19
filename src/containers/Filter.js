@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import '../assets/stylesheets/App.css';
 import { changeFilter } from '../actions/index';
 
-function Filter(props) {
+const Filter = (props) => {
   const dispatch = useDispatch();
   const category = useRef();
   const { filt } = props;
@@ -22,7 +22,7 @@ function Filter(props) {
       {cat.map((catt) => <option value={catt} key={catt}>{catt}</option>)}
     </select>
   );
-}
+};
 
 Filter.propTypes = { filt: PropTypes.instanceOf(Function).isRequired };
 

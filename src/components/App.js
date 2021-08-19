@@ -5,7 +5,7 @@ import { addCoin } from '../actions';
 import Coin from './Coin';
 import getData from '../util/apiFetch';
 
-function App() {
+const App = () => {
   const coinList = useSelector((state) => state.addCoin);
   const filtered = useSelector((state) => state.filter);
   const filteredCoins = coinList.filter((coin) => coin.marketCap <= parseInt(filtered, 10) || filtered === 'All');
@@ -28,6 +28,6 @@ function App() {
       </ul>
     </div>
   );
-}
+};
 
 export default App;

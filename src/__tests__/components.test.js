@@ -64,6 +64,19 @@ class ErrorBoundary extends React.Component {
   }
 }
 
+export function createTestStore() {//eslint-disable-line
+  const store = createStore(
+    combineReducers({
+      addCoin: CoinsReducer,
+      filter: FilterReducer,
+      detail: DetailsReducer,
+    }),
+  );
+  return store;
+}
+
+let store;
+
 describe('Filter Component', () => {
   test('It should render', () => {
     const filt = renderer.create(
@@ -105,18 +118,6 @@ describe('Error Component', () => {
   });
 });
 
-export function createTestStore() {//eslint-disable-line
-  const store = createStore(
-    combineReducers({
-      addCoin: CoinsReducer,
-      filter: FilterReducer,
-      detail: DetailsReducer,
-    }),
-  );
-  return store;
-}
-
-let store;
 describe('App Component', () => {
   beforeEach(() => {
     store = createTestStore();

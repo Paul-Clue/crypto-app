@@ -24,6 +24,7 @@ const Filter = (props) => {
   );
 };
 
-Filter.propTypes = { filt: PropTypes.instanceOf(Function).isRequired };
+Filter.propTypes = { filt: PropTypes.string };
+Filter.defaultProps = { filt: 'All' };
 
 export default Filter;

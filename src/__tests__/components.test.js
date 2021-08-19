@@ -69,7 +69,9 @@ describe('Filter Component', () => {
     const filt = renderer.create(
       <BrowserRouter>
         <ErrorBoundary>
-          <Filter />
+          <Provider store={store}>
+            <Filter />
+          </Provider>
         </ErrorBoundary>
       </BrowserRouter>,
     ).toJSON();
@@ -82,7 +84,9 @@ describe('Coin Component', () => {
     const coin = renderer.create(
       <BrowserRouter>
         <ErrorBoundary>
-          <Coin />
+          <Provider store={store}>
+            <Coin />
+          </Provider>
         </ErrorBoundary>
       </BrowserRouter>,
     ).toJSON();

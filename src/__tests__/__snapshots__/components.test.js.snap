@@ -164,6 +164,7 @@ exports[`Nav Component It should render 1`] = `
           name="category"
           onChange={[Function]}
           onSubmit={[Function]}
+          value="All"
         >
           <option
             value="All"

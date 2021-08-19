@@ -32,6 +32,8 @@ const Coin = (props) => {
   );
 };
 
-Coin.propTypes = { coin: PropTypes.instanceOf(Object).isRequired };
+Coin.propTypes = { coin: PropTypes.instanceOf(Object) };
+// Filter.propTypes = { filt: PropTypes.string };
+Coin.defaultProps = { coin: { name: 'bitcoin' } };
 
 export default Coin;

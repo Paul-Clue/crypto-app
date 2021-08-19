@@ -1,0 +1,22 @@
+.App {
+  width: 100%;
+}
+
+.UL {
+  position: absolute;
+  left: -2.08vw;
+  width: 102%;
+  list-style-type: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.navbar {
+  border: 5px solid black;
+}
+
+.NavHead {
+  color: whitesmoke;
+}

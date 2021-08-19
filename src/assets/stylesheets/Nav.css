@@ -1,0 +1,23 @@
+.dollar {
+  color: gold;
+}
+
+.filtTag {
+  color: whitesmoke;
+  font-weight: bolder;
+}
+
+.filtTag2 {
+  font-size: small;
+}
+
+.home {
+  margin-left: 50px;
+  margin-right: 50px;
+  font-size: x-large;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  border: 3px solid navy;
+  background-color: limegreen;
+}

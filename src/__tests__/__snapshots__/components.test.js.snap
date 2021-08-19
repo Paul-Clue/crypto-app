@@ -1,0 +1,213 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Component It should render 1`] = `
+<div
+  className="App"
+>
+  <ul
+    className="UL"
+  />
+</div>
+`;
+
+exports[`Coin Component It should render 1`] = `
+<h1>
+  Something went wrong.
+</h1>
+`;
+
+exports[`Details Component It should render 1`] = `
+<div
+  className="detail"
+>
+  <div
+    className="TitleName"
+  >
+    <img
+      alt="coin logo"
+    />
+    <h1
+      className="TitleName1"
+    />
+  </div>
+  <h1
+    className="detail2"
+  >
+    <span
+      className="bullet"
+    >
+      <span
+        className="bold"
+        id="one"
+      >
+        Symbol:
+      </span>
+         
+    </span>
+    <span
+      className="bullet"
+    >
+      <span
+        className="bold"
+      >
+        Rank:
+      </span>
+         
+    </span>
+    <span
+      className="bullet"
+    >
+      <span
+        className="bold"
+      >
+        Price:
+      </span>
+         
+    </span>
+    <span
+      className="bullet"
+    >
+      <span
+        className="bold"
+      >
+        Market Cap:
+      </span>
+         
+    </span>
+    <span
+      className="bullet"
+    >
+      <span
+        className="bold"
+      >
+        Total Supply:
+      </span>
+         
+    </span>
+    <span
+      className="bullet"
+    >
+      <span
+        className="bold"
+      >
+        Price Change 1h:
+      </span>
+         
+    </span>
+    <span
+      className="bullet"
+    >
+      <span
+        className="bold"
+      >
+        Price Change 1d:
+      </span>
+         
+    </span>
+    <span
+      className="bullet"
+    >
+      <span
+        className="bold"
+      >
+        Price Change 1w:
+      </span>
+         
+    </span>
+  </h1>
+</div>
+`;
+
+exports[`Error Component It should render 1`] = `
+<h1>
+  Oops! Page not found!
+</h1>
+`;
+
+exports[`Filter Component It should render 1`] = `
+<h1>
+  Something went wrong.
+</h1>
+`;
+
+exports[`Nav Component It should render 1`] = `
+<div>
+  <nav
+    className="navbar navbar-light bg-info"
+  >
+    <div
+      className="container-fluid"
+    >
+      <span
+        className="navbar-brand mb-0 h1"
+      >
+        <h1
+          className="NavHead"
+        >
+          <span
+            className="dollar"
+          >
+            $$
+          </span>
+          CRYPTO
+          <span
+            className="dollar"
+          >
+            $$
+          </span>
+        </h1>
+      </span>
+      <div>
+        <select
+          className="categories"
+          id="category"
+          name="category"
+          onChange={[Function]}
+          onSubmit={[Function]}
+          value="All"
+        >
+          <option
+            value="All"
+          >
+            All
+          </option>
+          <option
+            value="900000000000"
+          >
+            900000000000
+          </option>
+          <option
+            value="100000000000"
+          >
+            100000000000
+          </option>
+          <option
+            value="50000000000"
+          >
+            50000000000
+          </option>
+        </select>
+         
+        <span
+          className="filtTag"
+        >
+          Filter By Market Cap
+        </span>
+         
+        <span
+          className="filtTag2"
+        >
+           *Caps less than value chosen will appear
+        </span>
+        <a
+          className="Link home"
+          href="/"
+          onClick={[Function]}
+        >
+          Home
+        </a>
+      </div>
+    </div>
+  </nav>
+</div>
+`;
